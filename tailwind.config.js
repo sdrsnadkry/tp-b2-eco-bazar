@@ -17,7 +17,7 @@ module.exports = {
       },
       fontSize: {
         d1: ["4.5rem", "5.25rem"],
-        h1: ["3.5rem", "4.2rem"],
+        h1: ["3.5rem", "5.64rem"],
         h2: ["3rem", "3.6rem"],
         h3: ["2.5rem", "3rem"],
         h4: ["2.25rem", "2.7rem"],

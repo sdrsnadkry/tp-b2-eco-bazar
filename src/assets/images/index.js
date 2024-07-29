@@ -1,3 +1,4 @@
 import logo from './logo.svg'
+import banner from './banner.svg'
 
-export { logo }
+export { logo, banner }
