@@ -1,6 +1,6 @@
 import React from "react";
 import CategoryItem from "./categoryItem";
-import { appleIcon, saladActiveIcon } from "@/assets/icons";
+import { appleIcon, saladActiveIcon } from "../../assets/icons";
 import Slider from "./slider";
 
 const categoryItems = [
@@ -39,7 +39,7 @@ const categoryItems = [
 const Banner = () => {
   return (
     <section className="mx-10 grid grid-cols-12 mt-6 gap-6">
-      <div className="col-span-3 border border-grey-400">
+      <div className="col-span-12 lg:col-span-3 border border-grey-400">
         {categoryItems.map((category) => (
           <CategoryItem
             title={category.title}
@@ -50,7 +50,7 @@ const Banner = () => {
           />
         ))}
       </div>
-      <div className="col-span-9">
+      <div className="col-span-12 lg:col-span-9">
         <Slider />
       </div>
     </section>

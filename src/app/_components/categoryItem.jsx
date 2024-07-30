@@ -1,4 +1,3 @@
-import { appleIcon } from "@/assets/icons";
 import Image from "next/image";
 import React from "react";
 
