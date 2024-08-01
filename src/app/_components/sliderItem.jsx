@@ -1,4 +1,6 @@
+import Image from "next/image";
 import React from "react";
+import { arrowIcon } from "../../assets/icons";
 
 const SliderItem = (props) => {
   return (
@@ -10,9 +12,11 @@ const SliderItem = (props) => {
       <div className="mt-5 ">{props.subTitle}</div>
 
       <div className="mt-8">
-        <button className="bg-success text-white px-4 py-2 rounded-full">
+        <button className="bg-success text-white px-10 py-4 rounded-full flex items-center">
           Shop Now
-        </button>
+
+          <Image src={arrowIcon} alt="arrow" className="h-6 w-6 ml-4"/>
+        </button> 
       </div>
     </div>
   );

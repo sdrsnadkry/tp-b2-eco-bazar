@@ -9,6 +9,7 @@ import heartIcon from "./heart.svg";
 import userIcon from "./user.svg";
 import appleIcon from "./apple.svg";
 import saladActiveIcon from "./saladActive.png";
+import arrowIcon from "./arrow.svg";
 
 export {
   dropdownIcon,
@@ -21,5 +22,6 @@ export {
   heartIcon,
   userIcon,
   appleIcon,
-  saladActiveIcon
+  saladActiveIcon,
+  arrowIcon
 };
