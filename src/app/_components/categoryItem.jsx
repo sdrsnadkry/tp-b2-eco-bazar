@@ -1,9 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const CategoryItem = (props) => {
+
+  console.log(props.category.toLowerCase())
   return (
-    <div
+    <Link
+      href={`/category/${props.category.toLowerCase()}`}
       className={`flex items-center px-5 py-4  ${
         props.active ? "bg-success" : ""
       }`}
@@ -17,7 +21,7 @@ const CategoryItem = (props) => {
       >
         {props.title}
       </span>
-    </div>
+    </Link>
   );
 };
 

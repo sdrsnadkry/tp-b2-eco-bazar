@@ -1,42 +1,10 @@
 import React from "react";
 import CategoryItem from "./categoryItem";
-import { appleIcon, saladActiveIcon } from "../../assets/icons";
 import Slider from "./slider";
-
-const categoryItems = [
-  {
-    id: 1,
-    icon: appleIcon,
-    activeIcon: saladActiveIcon,
-    title: "Fruit Items",
-  },
-  {
-    id: 2,
-    icon: appleIcon,
-    activeIcon: saladActiveIcon,
-    title: "Vegetables",
-  },
-  {
-    id: 3,
-    icon: appleIcon,
-    activeIcon: saladActiveIcon,
-    title: "Chicken & Meat",
-  },
-  {
-    id: 4,
-    icon: appleIcon,
-    activeIcon: saladActiveIcon,
-    title: "Chicken & Meat",
-  },
-  {
-    id: 5,
-    icon: appleIcon,
-    activeIcon: saladActiveIcon,
-    title: "Chicken & Meat",
-  },
-];
+import { categoryItems } from "../../constants/products";
 
 const Banner = () => {
+  
   return (
     <section className="mx-10 grid grid-cols-12 mt-6 gap-6">
       <div className="col-span-12 lg:col-span-3 border border-grey-400">
@@ -47,6 +15,7 @@ const Banner = () => {
             icon={category.icon}
             active={category.id === 2}
             activeIcon={category.activeIcon}
+            category={category.category}
           />
         ))}
       </div>
