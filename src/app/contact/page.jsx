@@ -87,7 +87,7 @@ const Contact = () => {
           type="text"
           value={search}
           className="outline-none border border-green-600 rounded-md w-full px-4 py-4"
-          placeholder="Search text"
+          placeholder="Search products"
           onChange={(event) => {
             setSearch(event.target.value.toLowerCase());
           }}
