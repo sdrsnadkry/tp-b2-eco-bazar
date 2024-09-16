@@ -4,7 +4,6 @@ import React from "react";
 
 const CategoryItem = (props) => {
 
-  console.log(props.category.toLowerCase())
   return (
     <Link
       href={`/category/${props.category.toLowerCase()}`}

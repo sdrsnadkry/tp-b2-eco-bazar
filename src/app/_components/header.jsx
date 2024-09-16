@@ -1,3 +1,4 @@
+"use client";
 import {
   cartIcon,
   dropdownIcon,
@@ -11,8 +12,29 @@ import {
 import { logo } from "../../assets/images";
 import Image from "next/image";
 import NavLink from "./navLink";
+import Modal from "react-modal";
+import { useState } from "react";
+
+const customStyles = {
+  content: {
+    top: "0%",
+    width: "50%",
+    right: "auto",
+    left: "auto",
+    bottom: "auto",
+  },
+};
 
 export default function Header() {
+  const [modalIsOpen, setIsOpen] = useState(true);
+
+  function openModal() {
+    setIsOpen(true);
+  }
+  function closeModal() {
+    setIsOpen(false);
+  }
+
   return (
     <header className="mx-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 my-4">
@@ -112,7 +134,7 @@ export default function Header() {
             <div className="py-4">
               <Image src={heartIcon} alt="heart" className="w-8 h-8" />
             </div>
-            <div className="py-4 relative">
+            <div className="py-4 relative" onClick={openModal}>
               <Image src={cartIcon} alt="heart" className="w-8 h-8 mx-6" />
               <span className="text-white absolute top-3 right-5 text-[10px] w-5 h-5 bg-success-dark flex items-center justify-center rounded-full border border-gray-800 ">
                 2
@@ -124,6 +146,26 @@ export default function Header() {
           </div>
         </div>
       </div>
+
+      {/* <Modal
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        style={customStyles}
+        contentLabel="Example Modal"
+      >
+        <div className="h-screen bg-red-100">
+          <h2>Hello</h2>
+          <button onClick={closeModal}>close</button>
+          <div>I am a modal</div>
+          <form>
+            <input />
+            <button>tab navigation</button>
+            <button>stays</button>
+            <button>inside</button>
+            <button>the modal</button>
+          </form>
+        </div>
+      </Modal> */}
     </header>
   );
 }
